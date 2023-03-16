@@ -1,0 +1,181 @@
+.cont-analysis {
+    
+    .section {
+        padding: 50px 10px; 
+        flex-basis: 100%;
+        @include pc {
+            flex-basis: 50%;
+        }
+    }
+}
+
+.big-livecoin {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto !important;
+    box-sizing: border-box!important;
+}
+
+.cont-bestcrypto {
+    position: relative;
+    flex-grow: 1;
+    height: 60px;
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 10px;
+    box-sizing: content-box;
+    @include tablet {
+        height: 100px;
+    }
+}
+
+.bc-cryptos {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    
+
+}
+
+.bc-crypto {
+    width: 230px;
+    background-color: $secondary-color;
+    height: 100%;
+    display: flex;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 9px 20px;
+    color: white;
+    justify-content: space-between;
+    @include tablet {
+        width: 300px;
+        gap: 15px;
+        padding: 15px 30px;
+    }
+    .bcc-image {
+        height: 100%;
+    }
+    .bcc-title {
+        display: flex;
+        flex-direction: column;
+        .bcc-small-title {
+            font-size: 15px;
+            font-weight: bold;
+            @include tablet {
+                font-size: 20px;
+            }
+        }
+        .bcc-big-title {
+            font-size: 12px;
+            margin-top: -8px;
+        }
+    }
+    .bcc-value {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+        .bcv-coin-value {
+            font-size: 15px;
+            font-weight: bold;
+            @include tablet {
+                font-size: 20px;
+            }
+            color: rgb(255, 255, 255);
+        }
+    }
+    .bcv-evo {
+        font-size: 10px;
+        display: flex;
+        gap: 5px;
+        margin-top: -8px;
+    }
+}
+
+.cont-cryptoconvertor {
+    padding: 30px 10px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    color: $secondary-text-color;
+    @include tablet {
+        width: 768px;
+        margin: 0 auto;
+    }
+
+    .cc-form {
+        padding: 0 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        input, select {
+            background-color: transparent;
+            width: 100%;
+            border: 2px solid rgb(91, 91, 91);
+            border-radius: 4px;
+            padding: 2px 4px;
+        }
+        .cc-selectors {
+            gap: 2px;
+            width: 100%;
+            display: flex;
+        }
+    }
+
+    .result {
+        gap: 10px;
+        width:100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.cont-news {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 300px;
+    margin-bottom: 20px;
+    .cont-new {
+        padding: 10px;
+        position: relative;
+        height: 350px;
+        flex-basis: 100%;
+        @include tablet {
+            flex-basis: 50%;
+        }
+        @include pc {
+            flex-basis: 25%;
+
+        }
+    }
+    .new-img {
+        width: 100%;
+        height: 100%;
+        filter: brightness(70%);
+    }
+    .content {
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: flex-end;
+    }
+    .title {
+        font-size: 23px;
+        color: white;
+    }
+    .description {
+        color: white;
+    }
+}

@@ -1,0 +1,40 @@
+.graphics-container {
+    display: flex;
+    padding: 10px 0;
+    flex-wrap: wrap;
+    gap: 2%;
+    justify-content: center;
+    position: relative;
+    min-height: 400px;}
+
+.graphic {
+    padding: 20px 0;
+    flex-basis: 49%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    iframe {
+        display: block;
+        height: 400px;
+        width: 100%;
+    }
+}
+
+.view-more-button {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    width: fit-content;
+}
+
+.es35-graphic {
+    height: 700px;
+    padding: 20px 0;
+}
+
+.tradingview-widget-container {
+    height: 100%;
+}

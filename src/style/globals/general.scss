@@ -1,0 +1,23 @@
+:root {
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: $main-color;
+    color: $primary-text-color;
+}
+
+*::-webkit-scrollbar {
+    width: 15px;
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-clip: content-box;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    height: 10px;
+    background-color: rgb(191, 191, 191);
+}
+
+a {
+    text-decoration: none;
+}

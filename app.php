@@ -22,6 +22,19 @@ $router->get("/graphics/dowJones", function () {
     Router::render("dowJonesGraphic.php");
 });
 
+$router->get("/news/ethereum", function () {
+});
+
+$router->get("/news/bitcoin", function () {
+});
+
+$router->get("/news/blockchain", function () {
+});
+
+$router->get("/news/crypto", function () {
+});
+
+
 $router->post("/api/news", function () {
     require("controllers/NewsController.php");
     $nc = new NewsController();

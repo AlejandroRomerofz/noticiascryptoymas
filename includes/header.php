@@ -45,10 +45,12 @@
                             <div class="absolute mhod-arrow"></div>
                         </div>
                         <nav class="mhod-nav flex flex-col gap-y-3 font-light">
-                            <a class="mhod-option" href="">Bitcoin</a>
-                            <a class="mhod-option" href="">Etéreo</a>
-                            <a class="mhod-option" href="">Todas las Criptomonedas</a>
-                            <a class="mhod-option" href="">Convertidor de moneda</a>
+                            <a class="mhod-option" href="news/bitcoin">Bitcoin</a>
+                            <a class="mhod-option" href="news/ethereum">Etéreo</a>
+                            <a class="mhod-option" href="news/crypto">Todas las Criptomonedas</a>
+                            <a class="mhod-option" href="news/blockchain">BlockChain</a>
+                            <a class="mhod-option" href="news/all">Todas</a>
+
                         </nav>
                     </div>
                 </div>
@@ -110,7 +112,8 @@
         </div>
     </div>
     <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script> 
-    <div class="relative">
+    <div class="aaa"></div>
+    <div class="relative cont-sm">
         <div class="livecoinwatch-widget-5 small-livecoin" lcw-base="USD" lcw-color-tx="#999999" lcw-marquee-1="coins" lcw-marquee-2="none" lcw-marquee-items="10" ></div>
     </div>
     

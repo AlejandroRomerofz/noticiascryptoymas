@@ -1,7 +1,6 @@
 .container {
     width: 95%!important;
     @include small  {
-        max-width: 96vw!important;
         width: inherit!important;
     }
 }
@@ -39,6 +38,7 @@
 }
 
 .loading {
+    color: $secondary-text-color;
     position: absolute;
     width: 100%;
     height: 100%;

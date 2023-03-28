@@ -1,4 +1,8 @@
 import "../style/index.scss"
+import AllNews from "./pages/AllNews"
+import BitcoinNews from "./pages/BitcoinNews"
+import BlockchainNews from "./pages/BlockchainNews"
+import EthereumNews from "./pages/EthereumNews"
 import Graphics from "./pages/Graphics"
 import Header from "./pages/Header"
 import Home from "./pages/Home"
@@ -14,7 +18,22 @@ const routes = {
     },
     "/graphics/crypto" : function() {
         new Graphics().init()
+    },
+    "/news/bitcoin" : function() {
+        new BitcoinNews().init()
+    },
+    "/news/ethereum" : function() {
+        new EthereumNews().init()
+    },
+    "/news/blockchain" : function() {
+        new BlockchainNews().init()
+    },
+    "/news/all" : function() {
+        new AllNews().init()
     }
+    
+    
+
 }
 
 function init() {

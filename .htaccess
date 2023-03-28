@@ -6,3 +6,5 @@ RewriteRule ^ app.php
 RewriteCond %{REQUEST_URI} ^/public
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ app.php?%{QUERY_STRING}
+Header set Access-Control-Allow-Origin "*"
+

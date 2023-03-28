@@ -1,0 +1,22 @@
+.pagination-menu {
+    padding-bottom: 20px;
+    color: $secondary-text-color;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    color: blue;
+    p {
+        cursor: pointer;
+        width: fit-content;
+        &.selected {
+            color: black;
+            cursor: auto;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

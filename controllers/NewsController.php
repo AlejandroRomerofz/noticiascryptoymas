@@ -1,7 +1,7 @@
 <?php 
 class NewsController {
 
-    private $mode;
+    private $mode = [];
     private $lang;
 
     private $enLinks = [ "https://cointelegraph.com/rss", "https://cointelegraph.com/rss/tag/altcoin", "https://cointelegraph.com/rss/tag/bitcoin", "https://cointelegraph.com/rss/tag/blockchain", "https://cointelegraph.com/rss/tag/ethereum"];
@@ -18,7 +18,7 @@ class NewsController {
         if (isset($jsonRequest->mode)) {
             $this->mode = $jsonRequest->mode;
         } else {
-            $this->mode = 0;
+            array_push($this->mode, 0);
         }
 
         if (isset($jsonRequest->lang)) {
@@ -30,25 +30,35 @@ class NewsController {
 
     public function getNews() {
 
-        $url = "";
-        switch ($this->lang) {
-            case "es":
-                $url = $this->esLinks[$this->mode];
-                break;
-            case "en":
-                $url = $this->enLinks[$this->mode];
-                break;
-            default:
-                $url = $this->enLinks[$this->mode];
-                break;
-        };
 
-        $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curl, CURLOPT_HEADER, false);
-        $newsXML = curl_exec($curl);
-        echo ($newsXML);
+        $allNewsXML = [];
+
+        for($i = 0; $i < count($this->mode); $i++) {
+            $mode = $this->mode[$i];
+            $url = "";
+            switch ($this->lang) {
+                case "es":
+                    $url = $this->esLinks[$mode];
+                    break;
+                case "en":
+                    $url = $this->enLinks[$mode];
+                    break;
+                default:
+                    $url = $this->enLinks[$mode];
+                    break;
+            };
+
+            $curl = curl_init();
+            curl_setopt($curl, CURLOPT_URL, $url);
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($curl, CURLOPT_HEADER, false);
+            
+            $newsXML = curl_exec($curl);
+            array_push($allNewsXML, $newsXML);
+
+        }
+
+        return $allNewsXML;
 
     }
 

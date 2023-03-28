@@ -81,6 +81,7 @@
 }
 
 .menu-open-button {
+    z-index: 3;
     padding: 0 10px;
     @include pc {
         display: none;

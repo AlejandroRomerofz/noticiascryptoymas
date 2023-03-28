@@ -111,11 +111,12 @@ export default class Home {
 
     initCalculator() {
         this.addOptions()
+
         this.coinsSelect.addEventListener("change", (e) => {
-            
+            this.calculator.setCoin(e.target.value)
         })
         this.cryptoSelect.addEventListener("change", (e) => {
-
+            this.calculator.setCrypto(e.target.value)
         })
     }
 
@@ -124,12 +125,14 @@ export default class Home {
             coins.map((coin) => {
                 this.addCoinOption(coin)
             })
+            this.calculator.setCoin(this.coinsSelect.value)
             
         })
         new CoinsRequest().getAllCrypto(200).then((cryptos) => {
             cryptos.map((crypto) => {
                 this.addCryptoOption(crypto)
             })
+            this.calculator.setCrypto(this.cryptoSelect.value)
         })
     }
 
@@ -152,47 +155,27 @@ export default class Home {
     getTopNews() {
         const loading = new LoadingIcon(".cont-news")
         loading.startLoading()
-        new NewsRequest().getNews(8).then((news) => {
+        new NewsRequest().getNews(["all"],8).then((news) => {
             this.createNewsElements(news)
             loading.stopLoading()
-        }).catch(error => console.log(error))
+        }).catch(() => {this.errorElement(); loading.stopLoading()})
+    }
+
+    errorElement() {
+        const container = document.getElementById("news_container")
+        const newItem = document.createElement("p")
+        newItem.classList.add("text-error")
+        newItem.textContent = "Ha ocurrido un error al obtener las noticias"
+        container.appendChild(newItem)
     }
 
     createNewsElements(news) {
         const container = document.getElementById("news_container")
         news.forEach((newData) => {
-            this.createNewsElement(container, newData)
+            new NewsRequest().createNewsElement(container, newData)
         })
     }
 
-    createNewsElement(container, jsonData) {
-        const newItem = document.createElement("a")
-        newItem.classList.add("cont-new")
-        newItem.target = "_blank"
-        newItem.href = jsonData.link
-
-        const imgItem = document.createElement("img")
-        imgItem.classList.add("new-img")
-        imgItem.src = jsonData.image
-        newItem.appendChild(imgItem)
-
-        const content = document.createElement("div")
-        content.classList.add("content")
-
-        const titleItem = document.createElement("p")
-        titleItem.classList.add("title")
-        titleItem.textContent = jsonData.title
-        content.appendChild(titleItem)
-
-        const descItem = document.createElement("p")
-        descItem.classList.add("description")
-        descItem.textContent = jsonData.description
-        content.appendChild(descItem)
-
-        newItem.appendChild(content)
-
-        container.append(newItem)
-    }
 
 
 

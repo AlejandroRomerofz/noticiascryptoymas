@@ -45,11 +45,10 @@
                             <div class="absolute mhod-arrow"></div>
                         </div>
                         <nav class="mhod-nav flex flex-col gap-y-3 font-light">
-                            <a class="mhod-option" href="news/bitcoin">Bitcoin</a>
-                            <a class="mhod-option" href="news/ethereum">Etéreo</a>
-                            <a class="mhod-option" href="news/crypto">Todas las Criptomonedas</a>
-                            <a class="mhod-option" href="news/blockchain">BlockChain</a>
-                            <a class="mhod-option" href="news/all">Todas</a>
+                            <a class="mhod-option" href="/news/bitcoin">Bitcoin</a>
+                            <a class="mhod-option" href="/news/ethereum">Etéreo</a>
+                            <a class="mhod-option" href="/news/blockchain">BlockChain</a>
+                            <a class="mhod-option" href="/news/all">Todas las noticias</a>
 
                         </nav>
                     </div>

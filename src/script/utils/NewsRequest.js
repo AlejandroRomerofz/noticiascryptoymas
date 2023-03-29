@@ -1,5 +1,5 @@
 class NewsRequest {
-    URL = "http://localhost/api/news"
+    URL = "http://80.29.46.216/api/news"
 
     modesTraduction = {
         "all" : 0,

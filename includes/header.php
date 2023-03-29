@@ -29,7 +29,7 @@
                             <div class="absolute mhod-arrow"></div>
                         </div>
                         <nav class="mhod-nav flex flex-col gap-y-3 font-light">
-                            <a class="mhod-option" href="">Bitcoin</a>
+                            <a class="mhod-option" href="/crypto?code=BTC">Bitcoin</a>
                             <a class="mhod-option" href="">Etéreo</a>
                             <a class="mhod-option" href="">Todas las Criptomonedas</a>
                             <a class="mhod-option" href="">Convertidor de moneda</a>

@@ -39,6 +39,24 @@ $router->get("/news/all", function () {
 
 });
 
+$router->get("/crypto", function () {
+    if (isset($_GET["code"])) {
+        include "./controllers/CryptoInfo.php";
+        $symbol = $_GET["code"];
+        $info = new CryptoInfo();
+        $list = $info->getCryptoList();
+        if (isset($list[$symbol])) {
+            Router::render("crypto.php");
+        } else {
+            Router::render("not_found.php");
+        }        
+
+    } else {
+        Router::render("not_found.php");
+    }
+
+});
+
 
 $router->post("/api/news", function () {
     require("controllers/NewsController.php");

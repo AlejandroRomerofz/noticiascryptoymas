@@ -4,13 +4,16 @@ class CryptoCalculator {
     crypto = "BTC"
     mode = 0
     inputData
+    convertor;
 
     fromOutput
     toOutput
 
-    constructor(inputData, outputFromData, outputToData) {
+    constructor(inputData, outputFromData, outputToData, convertor) {
         this.fromOutput = outputFromData
         this.toOutput = outputToData    
+        this.convertor = convertor
+
         this.calculate(1)
 
         inputData.addEventListener("keyup", (e) => {
@@ -36,21 +39,33 @@ class CryptoCalculator {
         this.calculate(0)
     }
 
-    setMode(mode) {
-        if (mode == 0 || mode == 1) {
-            this.mode = mode
+    switchMode() {
+        if (this.mode == 0) {
+            this.mode = 1
         } else {
             this.mode = 0
         }
+        this.calculate(0)
     }
 
     calculate(val) {
+        var convertFunction = () => {}
         if (this.mode == 0) {
-            this.fromOutput.textContent = `${val} ${this.crypto}`
-            this.toOutput.textContent = `${val} ${this.coin}`
+           Object.entries(this.convertor).map((entry) => {
+                if (entry[0] == this.crypto) {
+                    convertFunction = entry[1][this.coin]
+                }
+           })
+            this.fromOutput.textContent = `${val.toLocaleString("es-ES")} ${this.crypto}`
+            this.toOutput.textContent = `${convertFunction(val) > 0 ? parseFloat(convertFunction(val).toFixed(2)).toLocaleString("es-ES") : 0} ${this.coin}`
         } else {
-            this.fromOutput.textContent = `${val} ${this.coin}`
-            this.toOutput.textContent = `${val} ${this.crypto}`
+            Object.entries(this.convertor).map((entry) => {
+                if (entry[0] == this.coin) {
+                    convertFunction = entry[1][this.crypto]
+                }
+           })
+            this.fromOutput.textContent = `${val.toLocaleString("es-ES")} ${this.coin}`
+            this.toOutput.textContent = `${convertFunction(val) > 0 ?  parseFloat(convertFunction(val).toFixed(2)).toLocaleString("es-ES") : 0} ${this.crypto}`
         }
     }
 

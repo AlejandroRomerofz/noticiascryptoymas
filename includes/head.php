@@ -22,6 +22,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <script src='https://coinconvert.net/assets/js/crypto-convert.min.js'></script>
     <script src="https://kit.fontawesome.com/0ec2e0845b.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/public/script/bundle.js"></script>

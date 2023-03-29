@@ -18,8 +18,8 @@
                 <input id="cc_value" value="1" placeholder="valor" type="number" min="0">
                 <div class="cc-selectors">
                     <select name="" id="crypto_selector"></select>
-                    <div class="cc_changer">
-
+                    <div id="crypto_switch" class="cc-changer">
+                        <i class="fa-solid fa-repeat"></i>
                     </div>
                     <select name="" id="coin_selector">
 
@@ -27,9 +27,9 @@
                 </div>
             </form>
             <div class="result">
-                <p class="from" id="from_output">232 Bitcoins</p>
+                <p class="from" id="from_output"></p>
                 <p>=</p>
-                <p class="to" id="to_output">2321 Dolares</p>
+                <p class="to" id="to_output"></p>
             </div>
         </div>
     </div>

@@ -2,36 +2,41 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style/index.scss ***!
   \***************************************************************************************************************/
 :root {
-  width: 100vw;
-  overflow-x: hidden;
   background-color: white;
   color: white; }
 
-*::-webkit-scrollbar {
-  width: 15px;
-  background-color: transparent; }
+/*::-webkit-scrollbar {
+    overflow: visible;
+    display: block;
+    width: 15px;
+    background-color: transparent;
+}
 
-*::-webkit-scrollbar-thumb {
-  background-clip: content-box;
-  border: 2px solid transparent;
-  border-radius: 5px;
-  height: 10px;
-  background-color: #bfbfbf; }
-
+*::-webkit-scrollbar-thumb{
+    background-clip: content-box;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    height: 10px;
+    background-color: rgb(191, 191, 191);
+}*/
 a {
   text-decoration: none; }
 
 .container {
-  width: 95% !important; }
+  width: 95% !important;
+  padding-left: 8px;
+  padding-right: 8px; }
   @media (min-width: 640px) {
     .container {
       width: inherit !important; } }
 
 .section {
-  padding: 20px 0 10px 0; }
+  padding-top: 20px;
+  padding-bottom: 10px; }
   @media (min-width: 1024px) {
     .section {
-      padding: 40px 0 10px 0; } }
+      padding-top: 40px;
+      padding-bottom: 10px; } }
 
 .section-title {
   padding: 30px 0;
@@ -505,7 +510,14 @@ header.small:hover .small-livecoin {
     .cont-cryptoconvertor .cc-form .cc-selectors {
       gap: 2px;
       width: 100%;
-      display: flex; }
+      display: flex;
+      align-items: center; }
+      .cont-cryptoconvertor .cc-form .cc-selectors.inverse {
+        flex-direction: row-reverse; }
+    .cont-cryptoconvertor .cc-form .cc-changer {
+      padding: 0 3px; }
+      .cont-cryptoconvertor .cc-form .cc-changer i {
+        cursor: pointer; }
   .cont-cryptoconvertor .result {
     gap: 10px;
     width: 100%;

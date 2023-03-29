@@ -1,14 +1,18 @@
 .container {
     width: 95%!important;
+    padding-left: 8px;
+    padding-right: 8px;
     @include small  {
         width: inherit!important;
     }
 }
 
 .section {
-    padding: 20px 0 10px 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
     @include pc {
-        padding: 40px 0 10px 0;
+        padding-top: 40px;
+        padding-bottom: 10px;
     }
 }
 

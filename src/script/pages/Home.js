@@ -99,18 +99,22 @@ export default class Home {
 
 
     valueInput = document.querySelector("#cc_value")
+    selectors = document.querySelector(".cc-selectors")
     coinsSelect = document.querySelector("#coin_selector")
     cryptoSelect = document.querySelector("#crypto_selector")
 
 
     fromOutput = document.querySelector("#from_output")
     toOutput = document.querySelector("#to_output")
+    switchButton = document.querySelector("#crypto_switch")
 
-    calculator = new CryptoCalculator(this.valueInput, this.fromOutput, this.toOutput)
+    convertor = new CryptoConvert(/*options?*/);
+    calculator = new CryptoCalculator(this.valueInput, this.fromOutput, this.toOutput, this.convertor)
 
 
     initCalculator() {
         this.addOptions()
+        this.switchButtonInit()
 
         this.coinsSelect.addEventListener("change", (e) => {
             this.calculator.setCoin(e.target.value)
@@ -120,19 +124,31 @@ export default class Home {
         })
     }
 
+    switchButtonInit() {
+        this.switchButton.addEventListener("click", () => {
+            this.selectors.classList.toggle("inverse")
+
+            this.calculator.switchMode()
+        })
+    }
+
     addOptions() {
+        this.convertor.ready().then(() => {
+            for(var key in this.convertor.cryptoInfo) {
+                const crypto = this.convertor.cryptoInfo[key]
+                this.addCryptoOption(crypto)
+            }
+            this.calculator.setCrypto(this.cryptoSelect.value)
+        })
         new CoinsRequest().getAllCoins().then((coins) => {
             coins.map((coin) => {
-                this.addCoinOption(coin)
+
+                if(this.convertor.list["fiat"].includes(coin.code)) {
+                    this.addCoinOption(coin)
+                }
             })
             this.calculator.setCoin(this.coinsSelect.value)
             
-        })
-        new CoinsRequest().getAllCrypto(200).then((cryptos) => {
-            cryptos.map((crypto) => {
-                this.addCryptoOption(crypto)
-            })
-            this.calculator.setCrypto(this.cryptoSelect.value)
         })
     }
 
@@ -145,8 +161,8 @@ export default class Home {
 
     addCryptoOption(cryptoData) {
         const option = document.createElement("option")
-        option.value = cryptoData.code
-        option.textContent = `${cryptoData.code} ${cryptoData.name}`
+        option.value = cryptoData.symbol
+        option.textContent = `${cryptoData.symbol} ${cryptoData.title}`
         this.cryptoSelect.appendChild(option)
     }
 

@@ -11,21 +11,21 @@
                 </nav>
             </div>
             <div class="f-col">
-                <h3 class="fc-title">Tienda</h3>
+                <h3 class="fc-title">Menu Rapido</h3>
                 <nav class="fc-nav">
-                    <a class="fc-nav-item" href="">Tazas</a>
-                    <a class="fc-nav-item" href="">Juegos</a>
-                    <a class="fc-nav-item" href="">Carteras</a>
-                    <a class="fc-nav-item" href="">Libros</a>
+                    <a class="fc-nav-item" href="">Graficos</a>
+                    <a class="fc-nav-item" href="">Criptomonedas</a>
+                    <a class="fc-nav-item" href="">Noticias</a>
+                    <a class="fc-nav-item" href="">Tienda</a>
                 </nav>
             </div>
             <div class="f-col">
-                <h3 class="fc-title">Tienda</h3>
+                <h3 class="fc-title">Información</h3>
                 <nav class="fc-nav">
-                    <a class="fc-nav-item" href="">Tazas</a>
-                    <a class="fc-nav-item" href="">Juegos</a>
-                    <a class="fc-nav-item" href="">Carteras</a>
-                    <a class="fc-nav-item" href="">Libros</a>
+                    <a class="fc-nav-item" href="">Politica de privacidad</a>
+                    <a class="fc-nav-item" href="">Contacto</a>
+                    <a class="fc-nav-item" href="">Información</a>
+                    <a class="fc-nav-item" href="">Politica de la tienda</a>
                 </nav>
             </div>
         </div>
@@ -41,7 +41,7 @@
                     <i class="fa-brands fa-youtube"></i>
                 </a>
             </div>
-            <p>&copy; NoticiasCryptoYMas. Todos los derechos reservadors.</p>
+            <p>&copy; NoticiasCryptoYMas. Todos los derechos reservados.</p>
         </div>
 
     </div>

@@ -1,0 +1,21 @@
+.crypto-info {
+    padding: 15px 0;
+}
+
+
+.ci-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    img {
+        max-width: 50px;
+    }
+    .ci-symbol {
+        font-size: 22px;
+        font-weight: bold;
+    }
+}
+
+.ci-graphic {
+    padding: 15px 0;
+}

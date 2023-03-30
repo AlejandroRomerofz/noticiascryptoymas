@@ -1,12 +1,17 @@
 :root {
     background-color: $main-color;
     color: $primary-text-color;
+    font-family: $mainFont;
 }
 
-/*::-webkit-scrollbar {
-    overflow: visible;
-    display: block;
-    width: 15px;
+::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 11px;
     background-color: transparent;
 }
 
@@ -15,8 +20,8 @@
     border: 2px solid transparent;
     border-radius: 5px;
     height: 10px;
-    background-color: rgb(191, 191, 191);
-}*/
+    background-color: $secondary-color;
+}
 
 a {
     text-decoration: none;

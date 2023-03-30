@@ -22,7 +22,7 @@
         <div class="mh-end w-fit flex flex-col gap-y-4" id="mobile_menu_container">
             <nav class="mh-nav items-center flex gap-x-5 text-md flex-sm-col">
                 <div class="mh-nav-option flex items-center gap-x-2 pb-1">
-                    <h2 class="text-white uppercase">Criptomonedas</h2>
+                    <h2 class="text-white capitalize">Criptomonedas</h2>
                     <i class="fa-solid fa-caret-down text-white"></i>
                     <div class="mh-option-drop shadow-xl z-20">
                         <div class="relative" style="z-index: -10;">
@@ -30,15 +30,15 @@
                         </div>
                         <nav class="mhod-nav flex flex-col gap-y-3 font-light">
                             <a class="mhod-option" href="/crypto?code=BTC">Bitcoin</a>
-                            <a class="mhod-option" href="">Etéreo</a>
-                            <a class="mhod-option" href="">Todas las Criptomonedas</a>
-                            <a class="mhod-option" href="">Convertidor de moneda</a>
+                            <a class="mhod-option" href="/crypto?code=ETH">Etéreo</a>
+                            <a class="mhod-option" href="/crypto/all">Todas las Criptomonedas</a>
+                            <a class="mhod-option" href="/#crypto_convertor">Convertidor de moneda</a>
                         </nav>
                     </div>
                 </div>
 
                 <div class="mh-nav-option flex items-center gap-x-2 pb-1">
-                    <h2 class="text-white uppercase">Noticias</h2>
+                    <h2 class="text-white capitalize">Noticias</h2>
                     <i class="fa-solid fa-caret-down text-white"></i>
                     <div class="mh-option-drop shadow-xl z-20">
                         <div class="relative" style="z-index: -10;">
@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="mh-nav-option flex items-center gap-x-2 pb-1">
-                    <h2 class="text-white uppercase">Graficos</h2>
+                    <h2 class="text-white capitalize">Graficos</h2>
                     <i class="fa-solid fa-caret-down text-white"></i>
                     <div class="mh-option-drop shadow-xl z-20">
                         <div class="relative" style="z-index: -10;">
@@ -71,7 +71,7 @@
                 </div>
 
                 <div class="mh-nav-option flex items-center gap-x-2 pb-1">
-                    <h2 class="text-white uppercase">Tienda</h2>
+                    <h2 class="text-white capitalize">Tienda</h2>
                     <i class="fa-solid fa-caret-down text-white"></i>
                     <div class="mh-option-drop right shadow-xl z-20">
                         <div class="relative" style="z-index: -10;">

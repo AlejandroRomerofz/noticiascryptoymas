@@ -5,7 +5,7 @@
     <div class="livecoinwatch-widget-5 big-livecoin" lcw-base="USD" lcw-color-tx="#999999" lcw-marquee-1="coins" lcw-marquee-2="none" lcw-marquee-items="10" ></div>
     <div class="container mx-auto section">
         <h2 class="section-title">Las <span>10 Mejores Criptomonedas</span></h2>
-        <div class="cont-bestcrypto" >
+        <div id="crypto_convertor" class="cont-bestcrypto" >
             <div class="bc-cryptos" id="cont_bestcrypto">
                 
             </div>

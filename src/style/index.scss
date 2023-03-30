@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 @import "./globals/variables.scss";
 @import "./globals/mixins.scss";
 @import "./globals/general.scss";
@@ -8,3 +8,5 @@
 @import "./layout/home.scss";
 @import "./layout/crypto-graphic.scss";
 @import "./layout/newsPage.scss";
+@import "./layout/crypto.scss";
+@import "./layout/not-found.scss";

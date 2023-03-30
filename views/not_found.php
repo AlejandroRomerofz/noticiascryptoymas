@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<?php include "./includes/head.php" ?>
+
 <body>
-    <p>404</p>
-    <p>La pagina no existe</p>
-</body>
-</html>
+    <?php include "./includes/header.php" ?>
+    <div class="container mx-auto not-found">
+        <h1 class="nf-number">404</h1>
+        <h2 class="nf-text">ESTA PAGINA NO EXISTE</h2>
+    </div>
+
+<?php include "./includes/footer.php" ?>

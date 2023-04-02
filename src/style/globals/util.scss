@@ -18,16 +18,16 @@
 }
 
 .section-title {
-    padding: 15px 0;
+    padding: 10px 0;
     font-size: 20px;
-    color: $tertiary-text-color;
+    color: $secondary-text-color;
     position: relative;
-    text-transform: capitalize;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     @include small {
-        padding: 20px 0;
+        padding: 15px 0;
         font-size: 30px;
     }
+    /*
     &::before {
         position: absolute;
         content: "";
@@ -43,7 +43,7 @@
 
 
         }
-    }
+    }*/
     span {
         font-weight: bold;
     }

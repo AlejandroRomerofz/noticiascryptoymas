@@ -5,7 +5,7 @@ class NewsController {
     private $lang;
 
     private $enLinks = [ "https://cointelegraph.com/rss", "https://cointelegraph.com/rss/tag/altcoin", "https://cointelegraph.com/rss/tag/bitcoin", "https://cointelegraph.com/rss/tag/blockchain", "https://cointelegraph.com/rss/tag/ethereum"];
-    private $esLinks = ["https://es.cointelegraph.com/rss", "https://es.cointelegraph.com/rss/tag/altcoin", "https://es.cointelegraph.com/rss/tag/bitcoin", "https://es.cointelegraph.com/rss/tag/blockchain", "https://es.cointelegraph.com/rss/tag/ethereum"];
+    private $esLinks = ["https://es.cointelegraph.com/rss", "https://es.cointelegraph.com/rss/tag/altcoin", "https://es.cointelegraph.com/rss/tag/bitcoin", "https://es.cointelegraph.com/rss/tag/blockchain", "https://es.cointelegraph.com/rss/tag/ethereum", "https://e00-expansion.uecdn.es/rss/economia.xml", "https://es.investing.com/rss/news_25.rss", "https://es.investing.com/rss/news_14.rss", "https://e00-expansion.uecdn.es/rss/mercados.xml", "https://e00-expansion.uecdn.es/rss/empresasinmobiliario.xml"];
 
     function __construct() {
         $jsonRequest = new stdClass();

@@ -155,6 +155,9 @@ export default class Home {
     addCoinOption(coinData) {
         const option = document.createElement("option")
         option.value = coinData.code
+        if(coinData.code == "EUR") {
+            option.setAttribute("selected", "true")
+        }
         option.textContent = `${coinData.code} ${coinData.name}`
         this.coinsSelect.appendChild(option)
     }

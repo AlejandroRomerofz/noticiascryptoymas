@@ -7,10 +7,6 @@ class Router {
 
     public function get(string $get, callable $function) {
 
-        if (str_contains($get, ":")) {
-
-        }
-
         if (!array_key_exists($get, $this->postList)) {
             $this->getList[$get] = $function;
         }
@@ -38,7 +34,7 @@ class Router {
 
         $route = explode("?", $route)[0];
 
-        if (str_ends_with($route, "/")) {
+        if ($this->endsWith($route, "/")) {
             $route = substr($route, 0, strlen($route) - 1);
         }
 
@@ -59,6 +55,16 @@ class Router {
                 call_user_func($this->postList[$route]);
                 break;
         }
+
+      
+    }
+
+    public function endsWith( $haystack, $needle ) {
+        $length = strlen( $needle );
+        if( !$length ) {
+            return true;
+        }
+        return substr( $haystack, -$length ) === $needle;
     }
 
 

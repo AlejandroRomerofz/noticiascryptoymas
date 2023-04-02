@@ -1,11 +1,13 @@
 import "../style/index.scss"
-import AllNews from "./pages/AllNews"
+import AllCrypto from "./pages/AllCrypto"
 import BitcoinNews from "./pages/BitcoinNews"
-import BlockchainNews from "./pages/BlockchainNews"
-import EthereumNews from "./pages/EthereumNews"
+import BolsaNews from "./pages/BolsaNews"
 import Graphics from "./pages/Graphics"
 import Header from "./pages/Header"
 import Home from "./pages/Home"
+import EconomyNews from "./pages/EconomyNews"
+import CryptoNews from "./pages/CryptoNews"
+import EstateNews from "./pages/estateNews"
 
 window.addEventListener("DOMContentLoaded", () => {
     init()
@@ -22,14 +24,20 @@ const routes = {
     "/news/bitcoin" : function() {
         new BitcoinNews().init()
     },
-    "/news/ethereum" : function() {
-        new EthereumNews().init()
+    "/news/exchange" : function() {
+        new BolsaNews().init()
     },
-    "/news/blockchain" : function() {
-        new BlockchainNews().init()
+    "/news/economy" : function() {
+        new EconomyNews().init()
     },
-    "/news/all" : function() {
-        new AllNews().init()
+    "/news/crypto" : function() {
+        new CryptoNews().init()
+    },
+    "/news/estate" : function() {
+        new EstateNews().init()
+    },
+    "/crypto/all" : function() {
+        new AllCrypto().init()
     }
     
     

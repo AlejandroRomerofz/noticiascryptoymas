@@ -20,14 +20,15 @@
 }
 
 .mh-start {
+    width: 10rem;
     z-index: 1;
-    height: 70px;
+    height: 60px;
     background-image: url("/public/res/images/logo.png");
     background-position: left;
     background-size: contain;
     background-repeat: no-repeat;
     @include tablet {
-        height: 100px;
+        height: 80px;
     }
 }
 

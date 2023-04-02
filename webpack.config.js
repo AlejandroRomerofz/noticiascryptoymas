@@ -21,7 +21,7 @@ const config = {
             }
         ]
     },
-    mode : "development"
+    mode : "production"
 }
 
 module.exports = config

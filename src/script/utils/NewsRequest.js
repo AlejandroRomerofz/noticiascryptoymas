@@ -1,5 +1,7 @@
 class NewsRequest {
-    URL = "http://localhost/api/news"
+    URL = "https://noticiascriptoymas.com/api/news"
+    //URL = "http://localhost/api/news"
+
 
     modesTraduction = {
         "all" : 0,
@@ -7,6 +9,11 @@ class NewsRequest {
         "bitcoin" : 2,
         "blockchain" : 3,
         "ethereum" : 4,
+        "economy" : 5,
+        "bolsa" : 6,
+        "economy_investing" : 7,
+        "bolsa_2" : 8,
+        "inmobiliario" : 9
     }
 
     getNews(modes = ["all"], limit = -1, from = 0, getTotalNumber = false) {
@@ -48,10 +55,12 @@ class NewsRequest {
 
                 var results = []
                 items.forEach((item) => {
-                    results.push(this.parseJSON(item))
+                    const result = this.parseJSON(item)
+                    if (result) {
+                        results.push(result)
+                    }
+                   
                 })
-
-                console.log(results)
                 
                 results.sort((a,b) => {
                     if (a.date.getTime() < b.date.getTime()) {
@@ -83,12 +92,20 @@ class NewsRequest {
 
     parseJSON(element) {
         const json = {}
-        json["title"] = element.querySelector("title").textContent
-        var description = new window.DOMParser().parseFromString(element.querySelector("description").textContent, "text/html").querySelectorAll("p")
-        json["description"] = description.length > 1 ? description[1].textContent : description[0].textContent
-        json["image"] = element.querySelector("enclosure").getAttribute("url")
-        json["date"] = new Date(element.querySelector("pubDate").textContent)
-        json["link"] = element.querySelector("link").textContent
+        console.log(element)
+        try {
+            json["title"] = element.querySelector("title").textContent
+            //var description = new window.DOMParser().parseFromString(element.querySelector("description").textContent, "text/html").querySelectorAll("p")
+            //json["description"] = description.length > 1 ? description[1].textContent : description[0].textContent
+            
+            json["image"] = element.querySelector("enclosure") ? element.querySelector("enclosure").getAttribute("url") : element.querySelector("content").getAttribute("url")
+            json["date"] = new Date(element.querySelector("pubDate").textContent)
+            json["link"] = element.querySelector("link").textContent
+        } catch (E) {
+            console.log(E)
+            return false;
+        }
+        
         return json
     }
 

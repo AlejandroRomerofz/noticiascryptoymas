@@ -3,7 +3,7 @@
 <body>
     <?php include "./includes/header.php" ?>
     <div class="container mx-auto">
-        <h2 class="section-title">Grafico de <span>DowJones</span></h2>
+        <h2 class="section-title">Gráfico de <span>DowJones</span></h2>
         <div id="es35_container" class="es35-graphic">
             <div class="tradingview-widget-container">
                 <div id="tradingview_3a5d7"></div>

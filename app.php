@@ -10,32 +10,33 @@ $router->get("/graphics/crypto", function () {
     Router::render("graphics.php");
 });
 
-$router->get("/graphics/ibex", function () {
-    Router::render("ibexGraphic.php");
+$router->get("/graphics/exchange", function () {
+    Router::render("exchangeGraphic.php");
 });
 
-$router->get("/graphics/nasdaq", function () {
-    Router::render("nasdaq.php");
+$router->get("/news/exchange", function () {
+    Router::render("bolsaNews.php");
 });
 
-$router->get("/graphics/dowJones", function () {
-    Router::render("dowJonesGraphic.php");
-});
-
-$router->get("/news/ethereum", function () {
-    Router::render("ethereumNews.php");
+$router->get("/news/estate", function () {
+    Router::render("estateNews.php");
 });
 
 $router->get("/news/bitcoin", function () {
     Router::render("bitcoinNews.php");
 });
 
-$router->get("/news/blockchain", function () {
-    Router::render("blockchainNews.php");
+$router->get("/news/economy", function () {
+    Router::render("economyNews.php");
 });
 
-$router->get("/news/all", function () {
-    Router::render("allNews.php");
+$router->get("/news/crypto", function () {
+    Router::render("cryptoNews.php");
+
+});
+
+$router->get("/crypto/all", function () {
+    Router::render("allCrypto.php");
 
 });
 
@@ -57,6 +58,13 @@ $router->get("/crypto", function () {
 
 });
 
+
+$router->post("/api/crypto", function () {
+    include "./controllers/CryptoInfo.php";
+    $info = new CryptoInfo();
+    $list = $info->getCryptoList();
+    echo(json_encode($list));
+});
 
 $router->post("/api/news", function () {
     require("controllers/NewsController.php");

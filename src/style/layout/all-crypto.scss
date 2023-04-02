@@ -1,0 +1,44 @@
+.all-crypto {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ac-crypto {
+    flex-basis: 100%;
+    @include small {
+        flex-basis: 33.3%;
+    }
+
+    @include pc {
+        flex-basis: 25%;
+    }
+    padding: 5px;
+}
+
+.acc-content {
+    box-shadow: 0 0 5px  black;
+
+    display: flex;
+    padding: 4px 8px;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    color: black;
+    gap: 3px;
+    img {
+        margin-right: 8px;
+        max-height: 100%;
+    }
+    .symbol {
+        font-size: 20px;
+        font-weight: bold;
+        height: fit-content;
+        text-transform: uppercase;
+    }
+    .title {
+        padding-top: 4px;
+        text-transform: capitalize;
+        font-size: 15px;
+        font-weight: light;
+    }
+}

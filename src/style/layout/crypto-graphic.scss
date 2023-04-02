@@ -1,9 +1,11 @@
 .graphics-container {
     display: flex;
-    padding: 10px 0;
+    margin-top: -25px;
+    padding-bottom: 10px;
     flex-wrap: wrap;
     gap: 2%;
     justify-content: center;
+    color: $secondary-text-color;
     position: relative;
     min-height: 400px;}
 
@@ -32,7 +34,8 @@
 
 .es35-graphic {
     height: 700px;
-    padding: 20px 0;
+    padding-bottom: 20px;
+
 }
 
 .tradingview-widget-container {

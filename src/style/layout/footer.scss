@@ -6,10 +6,16 @@
     }
     .footer-top{
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         flex-wrap: wrap;
         border-bottom: 1px solid white;
         padding: 30px 0;
+        gap: 20px;
+        @include tablet {
+            gap: 0;
+            flex-direction: row;
+        }
     }
     .f-col {
         padding: 0 10px;

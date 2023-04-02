@@ -2,30 +2,36 @@
     <div class="container mx-auto cont-footer">
         <div class="footer-top">
             <div class="f-col">
+                <h3 class="fc-title">¿Quienes somos?</h3>
+                <nav class="fc-nav">
+                    <a class="fc-nav-item" href="/aboutus">Nuestro equipo</a>
+                    <a class="fc-nav-item" href="/">¿Que aportamos?</a>
+                    <a class="fc-nav-item" href="/shoppolicy">Política de la tienda</a>
+                    <a class="fc-nav-item" href="/privacypolicy">Política de privacidad</a>
+                </nav>
+            </div>
+            <div class="f-col">
+                <h3 class="fc-title">Criptomonedas</h3>
+                <nav class="fc-nav">
+                    <a class="fc-nav-item" href="/news/crypto">Noticias cripto</a>
+                    <a class="fc-nav-item" href="/crypto?code=BTC">Bitcoin</a>
+                    <a class="fc-nav-item" href="/crypto?code=ETH">Ethereum</a>
+                    <a class="fc-nav-item" href="/crypto/all">Todas las criptomonedas</a>
+                    <a class="fc-nav-item" href="/#crypto_convertor">Conversor de criptomonedas</a>
+                </nav>
+            </div>
+            <div class="f-col">
+                <h3 class="fc-title">Índices bursátiles</h3>
+                <nav class="fc-nav">
+                    <a class="fc-nav-item" href="/news/exchange">Noticias bolsa</a>
+                    <a class="fc-nav-item" href="/graphics/exchange">Gráficos</a>
+                </nav>
+            </div>
+            <div class="f-col">
                 <h3 class="fc-title">Tienda</h3>
                 <nav class="fc-nav">
-                    <a class="fc-nav-item" href="">Tazas</a>
-                    <a class="fc-nav-item" href="">Juegos</a>
-                    <a class="fc-nav-item" href="">Carteras</a>
-                    <a class="fc-nav-item" href="">Libros</a>
-                </nav>
-            </div>
-            <div class="f-col">
-                <h3 class="fc-title">Menu Rapido</h3>
-                <nav class="fc-nav">
-                    <a class="fc-nav-item" href="">Graficos</a>
-                    <a class="fc-nav-item" href="">Criptomonedas</a>
-                    <a class="fc-nav-item" href="">Noticias</a>
-                    <a class="fc-nav-item" href="">Tienda</a>
-                </nav>
-            </div>
-            <div class="f-col">
-                <h3 class="fc-title">Información</h3>
-                <nav class="fc-nav">
-                    <a class="fc-nav-item" href="">Politica de privacidad</a>
-                    <a class="fc-nav-item" href="">Contacto</a>
-                    <a class="fc-nav-item" href="">Información</a>
-                    <a class="fc-nav-item" href="">Politica de la tienda</a>
+                    <a class="fc-nav-item" href="">Noticias bolsa</a>
+                    <a class="fc-nav-item" href="">Gráficos</a>
                 </nav>
             </div>
         </div>

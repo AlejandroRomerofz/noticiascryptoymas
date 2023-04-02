@@ -1,10 +1,12 @@
-RewriteEngine On
 
-RewriteCond %{REQUEST_URI} !^/public
-RewriteRule ^ app.php
+<IfModule mod_rewrite.c>
+    RewriteEngine On
 
-RewriteCond %{REQUEST_URI} ^/public
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ app.php?%{QUERY_STRING}
-Header set Access-Control-Allow-Origin "*"
-
+    RewriteCond %{REQUEST_URI} !^/public
+    RewriteRule ^ app.php
+    
+    RewriteCond %{REQUEST_URI} ^/public
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ app.php?%{QUERY_STRING}
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
